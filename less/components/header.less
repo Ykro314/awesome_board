@@ -1,7 +1,7 @@
 .header {
   &__menu {
-    background: @bg-header;
     height: 45px;
+    background: @bg-header-menu;
     color: white;
   }
   .wrapper {
@@ -10,7 +10,7 @@
     align-items: center;
   }
   &__logo {
-    font-size: 23px;
+    font-size: 20px;
   }
   &__icons {
     display: flex;
@@ -24,7 +24,7 @@
     font-weight: bold;
     cursor: pointer;
     &:hover {
-      background: @bg-header-hover;
+      background: @bg-header-menu-hover;
     }
   }
   &__lang:hover {
@@ -38,11 +38,11 @@
     position: absolute;
     top: 52px;
     left: 0;
+    opacity: 0;
     font-size: 15px;
     background: white;
-    opacity: 0;
-    border: 1px solid #c5d0db;
-    color: @color-header-text;
+    border: 1px solid @fc-header-dropdown;
+    color: @fc-header-dropdown;
     transition: opacity 0.2s;
     &:after {
       position: absolute;
@@ -51,11 +51,11 @@
       content: "";
       width: 6px;
       height: 6px;
+      transform: rotate(45deg);
       background: white;
-      border: 1px solid #c5d0db;
+      border: 1px solid @fc-header-dropdown;
       border-bottom-color: transparent;
       border-right-color: transparent;
-      transform: rotate(45deg);
     }
     span {
       display: block;
@@ -76,5 +76,8 @@
   display: block;
   width: 100%;
   height: 375px;
-  background: url("/graph/pict/about_cover.jpg") no-repeat top center;
+  background: 
+    url("/graph/pict/about_cover.jpg") 
+    no-repeat 
+    top center;
 }
